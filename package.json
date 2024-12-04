@@ -4,12 +4,12 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "build": "pnpm --filter ember-legacy-utils build",
+    "build": "pnpm --filter @ember/legacy-utils build",
     "lint": "pnpm --filter '*' lint",
     "lint:fix": "pnpm --filter '*' lint:fix",
     "prepare": "pnpm build",
     "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "pnpm --filter ember-legacy-utils start --no-watch.clearScreen",
+    "start:addon": "pnpm --filter @ember/legacy-utils start --no-watch.clearScreen",
     "start:test-app": "pnpm --filter test-app start",
     "test": "pnpm --filter '*' test",
     "test:ember": "pnpm --filter '*' test:ember"
@@ -20,8 +20,10 @@
     "prettier": "^3.0.3",
     "prettier-plugin-ember-template-tag": "^2.0.2"
   },
+  "packageManager": "pnpm@9.14.4",
   "pnpm": {
     "overrides": {
+      "@babel/traverse": "7.25.9",
       "@types/eslint": "^7.0.0"
     }
   }
